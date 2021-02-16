@@ -10,7 +10,7 @@
         'text-butter': message.color === 'butter',
         'text-mantis': message.color === 'mantis'
       }"
-      class="user overflow-ellipsis overflow-hidden text-right relative pr-1"
+      class="user overflow-ellipsis overflow-hidden text-right relative pr-1 font-medium"
       :style="{
         width: userWidth
       }"

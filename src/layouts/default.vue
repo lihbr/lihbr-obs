@@ -28,7 +28,7 @@ import Variation12 from "~/components/display/Variation12.vue";
 
 const themes = ["navy", "beet", "flamingo", "ochre", "butter", "mantis"];
 
-const messages = [
+const dummyMessages = [
   {
     user: "phoenixEvans",
     body: "Ut enim ad minima veniam, quis nostrum exercitationem.",
@@ -63,7 +63,7 @@ export default {
       theme: {
         current: ""
       },
-      messages: []
+      messages: [...dummyMessages]
     };
   },
   head() {

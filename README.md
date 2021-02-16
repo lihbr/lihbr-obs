@@ -1,5 +1,5 @@
-# PROJECT_NAME
+# lihbr-obs
 
 ## About
 
-Project description
+Stream overlays made with Vue.js, crazy uh?

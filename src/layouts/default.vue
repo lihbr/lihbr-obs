@@ -63,7 +63,7 @@ export default {
       theme: {
         current: ""
       },
-      messages: [...dummyMessages]
+      messages: []
     };
   },
   head() {

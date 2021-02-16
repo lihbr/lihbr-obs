@@ -29,8 +29,6 @@
 </template>
 
 <script>
-// import Component from "~/components/Component.vue";
-
 export default {
   props: {
     message: {

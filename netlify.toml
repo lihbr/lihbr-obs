@@ -48,20 +48,14 @@
 [context.branch-deploy.processing]
   skip_processing = true
 
+# [[redirects]]
+#   from = "/api/v1/*"
+#   to = "/.netlify/functions/:splat"
+#   status = 200
+#   force = true
+
 [[redirects]]
-  from = "/api/v1/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
+  from = "https://lihbr-obs.netlify.app/*"
+  to = "https://obs.lihbr.com/:splat"
+  status = 301
   force = true
-
-# [[redirects]]
-#   from = "https://www.example.com/*"
-#   to = "https://example.com/:splat"
-#   status = 301
-#   force = true
-
-# [[redirects]]
-#   from = "https://SITE_URL.netlify.app/*"
-#   to = "https://example.com/:splat"
-#   status = 301
-#   force = true

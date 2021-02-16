@@ -1,0 +1,24 @@
+{
+  "name": "NAME",
+  "version": "0.0.0",
+  "description": "DESCRIPTION",
+  "private": true,
+  "author": "lihbr <hello@lihbr.com> (https://lihbr.com)",
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {},
+  "engines": {
+    "node": ">=10.16.3",
+    "yarn": ">=1.13.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint --env HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
+    "husky": "4.3.8"
+  }
+}

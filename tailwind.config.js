@@ -15,7 +15,7 @@ module.exports = {
   important: false,
   separator: ":",
   purge: {
-    enabled: process.env.NODE_ENV === "production",
+    enabled: !!process.env.NETLIFY,
     content: ["./src/**/*.html", "./src/**/*.vue"],
     options: {
       safelist: {

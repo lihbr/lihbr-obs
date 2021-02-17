@@ -15,8 +15,6 @@ module.exports = {
   important: false,
   separator: ":",
   purge: {
-    enabled: !!process.env.NETLIFY,
-    content: ["./src/**/*.html", "./src/**/*.vue"],
     options: {
       safelist: {
         standard: [/^color--.*/]
@@ -109,9 +107,6 @@ module.exports = {
         DEFAULT: "#759f53",
         "o-20": alpha("#759f53", 0.2),
         100: "#93bd71"
-      },
-      cyan: {
-        DEFAULT: "#00ffff"
       }
     },
     fontSize: {

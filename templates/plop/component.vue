@@ -15,6 +15,6 @@ export default {
 };
 </script>
 
-<style scoped>
-/* .{{ camelCase fullname }} {} */
+<style lang="sass" scoped>
+// .{{ camelCase fullname }}
 </style>

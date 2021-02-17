@@ -2,7 +2,7 @@
 <template>
   <div class="__layout__{{ kebabCase name }}">
     <main id="main" class="main">
-      <slot />
+      <nuxt />
     </main>
   </div>
 </template>
@@ -14,13 +14,6 @@ export default {
   components: {
     // Component
   },
-  data() {
-    return {
-      theme: {
-        current: "beet"
-      }
-    };
-  },
   head() {
     const script = [];
 
@@ -30,15 +23,27 @@ export default {
       },
       script
     };
+  },
+  computed: {
+    theme() {
+      return this.$store.state.theme;
+    }
+  },
+  mounted() {
+    this.$store.dispatch("init");
   }
 };
 </script>
 
-<style>
-html {
-  font-size: 16px; /* don't change this! */
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
+<style lang="sass">
+html
+  font-size: 16px // don't change this!
+  word-spacing: 1px
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  margin-right: calc(100% - 100vw)
+  @apply antialiased box-border font-main font-light text-slate bg-cream-900 overflow-hidden
+
+  &.dark
+    @apply text-cream bg-slate-900
 </style>

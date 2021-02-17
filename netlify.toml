@@ -7,7 +7,11 @@
   # Build directory
   publish = "dist/"
   # Serverless Lambda functions
-  functions = "functions/"
+  functions = "lambda/"
+
+# Enforce yarn
+[build.environment]
+  NETLIFY_USE_YARN = "true"
 
 # Post processing configuration
 [build.processing]
@@ -25,7 +29,8 @@
 
 # Netlify dev config
 [dev]
-  command = "nuxt" # specify command here
+  framework = "#custom"
+  command = "yarn dev"
   port = 8888
   targetPort = 3000
   autoLaunch = false
@@ -46,13 +51,13 @@
 [context.branch-deploy]
 
 [context.branch-deploy.processing]
-  skip_processing = true
+  skip_processing = false
 
-# [[redirects]]
-#   from = "/api/v1/*"
-#   to = "/.netlify/functions/:splat"
-#   status = 200
-#   force = true
+[[redirects]]
+  from = "/api/v1/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "https://lihbr-obs.netlify.app/*"

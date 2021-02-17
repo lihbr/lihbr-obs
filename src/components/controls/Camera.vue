@@ -1,16 +1,9 @@
 <!-- HEALTH:UNKNOWN camera -->
 <template>
   <div
-    class="camera bg-cyan"
+    class="camera color color--basic"
     :style="{ borderBottomWidth: '20px' }"
-    :class="{
-      'border-navy': color === 'navy',
-      'border-beet': color === 'beet',
-      'border-flamingo': color === 'flamingo',
-      'border-ochre': color === 'ochre',
-      'border-butter': color === 'butter',
-      'border-mantis': color === 'mantis'
-    }"
+    :class="`color--${color}`"
   >
     <div
       :style="{ width: size, height: size }"
@@ -24,10 +17,6 @@
 <script>
 export default {
   props: {
-    name: {
-      type: String,
-      default: ""
-    },
     color: {
       type: String,
       default: "navy"

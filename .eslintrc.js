@@ -24,18 +24,6 @@ module.exports = {
       "kebab-case",
       { registeredComponentsOnly: false }
     ],
-    "vue/component-definition-name-casing": ["error", "kebab-case"],
-    "vue/html-self-closing": [
-      "error",
-      {
-        html: {
-          void: "any",
-          normal: "any",
-          component: "never"
-        },
-        svg: "always",
-        math: "always"
-      }
-    ]
+    "vue/component-definition-name-casing": ["error", "kebab-case"]
   }
 };

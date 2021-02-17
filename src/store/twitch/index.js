@@ -29,7 +29,7 @@ const dummyMessages = [
 ];
 
 export const state = () => ({
-  messages: [...dummyMessages]
+  messages: process.env.DEV ? dummyMessages : []
 });
 
 export const mutations = {

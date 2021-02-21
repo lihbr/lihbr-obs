@@ -60,6 +60,12 @@
   force = true
 
 [[redirects]]
+  from = "/api/v1/config"
+  to = "https://s.lihbr.com/twch-settings.json"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "https://lihbr-obs.netlify.app/*"
   to = "https://obs.lihbr.com/:splat"
   status = 301

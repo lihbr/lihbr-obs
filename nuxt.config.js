@@ -121,6 +121,8 @@ module.exports = async () => {
      */
     env: {
       TWITCH_CHANNEL: process.env.TWITCH_CHANNEL,
+      CONFIG_URL: process.env.CONFIG_URL,
+      CONFIG_TIMEOUT: parseInt(process.env.CONFIG_TIMEOUT) || 15000,
       ...env
     },
 

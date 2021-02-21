@@ -13,8 +13,9 @@ export const actions = {
     if (state.inited) return;
 
     // Actions performed on application mount
-    dispatch("twitch/init");
+    dispatch("config/init");
     dispatch("theme/init");
+    dispatch("twitch/init");
 
     // Init finished
     commit("isInited");

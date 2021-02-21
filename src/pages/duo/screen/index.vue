@@ -27,27 +27,13 @@
       />
       <aside :style="{ width: '393px' }" class="flex flex-col justify-between">
         <camera size="393px" :color="$store.state.theme.antepenultimate">
-          Alex @trostcodes
+          {{ people.host }}
         </camera>
         <camera size="393px" :color="$store.state.theme.penultimate">
-          Lucie @li_hbr
+          {{ people.guest }}
         </camera>
       </aside>
     </section>
-    <footer class="fixed left-0 w-full bottom-0 z-10">
-      <section
-        class="flex flex-col justify-center mx-auto mb-5 stack-2"
-        :style="{ width: '620px', height: '174px' }"
-      >
-        <h1 class="heading-h1 color color--current color--basic">
-          Setting up the Slice Builder
-        </h1>
-        <p class="paragraph-lead">
-          Join us for #SliceContest!
-          <span class="underline">s.lihbr.com/slice-contest</span>
-        </p>
-      </section>
-    </footer>
   </div>
 </template>
 
@@ -62,11 +48,16 @@ export default {
 
     DuoScreenSvg
   },
-  layout: "fullscreen",
+  layout: "chatSegmentsVariation",
   head() {
     return this.$buildHead({
       path: this.$route.path
     });
+  },
+  computed: {
+    people() {
+      return this.$store.state.config.people;
+    }
   },
   mounted() {
     this.$store.dispatch("pageChanged");

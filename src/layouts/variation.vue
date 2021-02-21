@@ -1,15 +1,8 @@
-<!-- HEALTH:HIGH __layout__fullscreen -->
+<!-- HEALTH:HIGH __layout__variation -->
 <template>
-  <div class="__layout__fullscreen">
+  <div class="__layout__variation">
     <!-- floating -->
-    <chat-wrapper
-      class="fixed bottom-5 right-5 z-10"
-      height="174px"
-      width="393px"
-      user-width="111px"
-      body-width="272px"
-    />
-    <variation-twelve
+    <background-variation-twelve
       class="opacity-70 fixed z-10"
       size="960px"
       :style="{ top: '272px', left: '-327px' }"
@@ -20,13 +13,11 @@
 </template>
 
 <script>
-import ChatWrapper from "~/components/controls/chat/Wrapper.vue";
-import VariationTwelve from "~/components/display/background/VariationTwelve.vue";
+import BackgroundVariationTwelve from "~/components/display/background/VariationTwelve.vue";
 
 export default {
   components: {
-    ChatWrapper,
-    VariationTwelve
+    BackgroundVariationTwelve
   },
   head() {
     const script = [];

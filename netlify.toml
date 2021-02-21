@@ -54,13 +54,6 @@
   skip_processing = false
 
 [[redirects]]
-  from = "/api/v1/config"
-  to = "https://s.lihbr.com/twch-settings.json"
-  status = 200
-  force = true
-  headers = { Access-Control-Allow-Origin = "*" }
-
-[[redirects]]
   from = "/api/v1/*"
   to = "/.netlify/functions/:splat"
   status = 200

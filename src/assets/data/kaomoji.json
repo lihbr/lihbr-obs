@@ -1,0 +1,51 @@
+{
+  "shrug": {
+    "style": {
+      "fontSize": "660px",
+      "fontWeight": 400
+    },
+    "value": "¯\\_(ツ)_/¯"
+  },
+  "squint": {
+    "style": {
+      "fontSize": "660px",
+      "fontWeight": 400
+    },
+    "value": "ಠ_ಠ"
+  },
+  "celebrateLeft": {
+    "style": {
+      "fontSize": "660px",
+      "fontWeight": 400
+    },
+    "value": "~(˘▾˘~)"
+  },
+  "celebrateRight": {
+    "style": {
+      "fontSize": "660px",
+      "fontWeight": 400
+    },
+    "value": "(~˘▾˘)~"
+  },
+  "bear": {
+    "style": {
+      "fontSize": "810px",
+      "fontWeight": 400
+    },
+    "value": "ʕ•ᴥ•ʔ"
+  },
+  "puzzled": {
+    "style": {
+      "fontSize": "810px",
+      "fontWeight": 400
+    },
+    "value": "(•_•)"
+  },
+  "cute": {
+    "style": {
+      "fontSize": "600px",
+      "fontWeight": 400
+    },
+    "value": "｡◕‿◕｡"
+  }
+}

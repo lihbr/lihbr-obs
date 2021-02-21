@@ -58,10 +58,14 @@ module.exports = async () => {
       "@fontsource/antic-slab/latin-400.css",
       "@fontsource/roboto/latin-300.css",
       "@fontsource/roboto/latin-300-italic.css",
+      "@fontsource/roboto/latin-400.css",
+      "@fontsource/roboto/latin-400-italic.css",
       "@fontsource/roboto/latin-500.css",
       "@fontsource/roboto/latin-500-italic.css",
       "@fontsource/roboto/latin-700.css",
       "@fontsource/roboto/latin-700-italic.css",
+      "@fontsource/roboto/latin-900.css",
+      "@fontsource/roboto/latin-900-italic.css",
       "~/assets/sass/style.sass"
     ],
 

@@ -1,8 +1,8 @@
-<!-- HEALTH:UNKNOWN __page__duo-cam -->
+<!-- HEALTH:UNKNOWN __page__solo-cam -->
 <template>
-  <div class="__page__duo-cam">
+  <div class="__page__solo-cam">
     <!-- background -->
-    <duo-cam-svg
+    <solo-cam-svg
       class="fixed inset-0 w-full h-full text-cream dark:text-slate transition-color fill-current"
     />
     <svg width="0" height="0">
@@ -11,7 +11,7 @@
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
-            d="M1920 0H0V1080H1920V0ZM734 130H234V846H734V130Z"
+            d="M1920 0H0V1080H1920V0ZM910 130H350V930H910V130Z"
           />
         </clipPath>
       </defs>
@@ -21,37 +21,36 @@
       class="fixed left-0 w-full z-10 flex justify-center"
       :style="{ top: '130px' }"
     >
-      <camera size="716px" :color="$store.state.theme.penultimate" class="mr-5">
-        {{ people.host }}
-      </camera>
-      <camera size="716px" :color="$store.state.theme.antepenultimate">
-        {{ people.guest }}
-      </camera>
+      <camera size="800px" :color="$store.state.theme.current" class="mr-5" />
+      <chat-wrapper
+        class="relative"
+        height="820px"
+        width="400px"
+        user-width="115px"
+        body-width="275px"
+      />
     </main>
   </div>
 </template>
 
 <script>
+import ChatWrapper from "~/components/controls/chat/Wrapper.vue";
 import Camera from "~/components/controls/Camera.vue";
 
-import DuoCamSvg from "~/assets/masks/duoCam.svg";
+import SoloCamSvg from "~/assets/masks/soloCam.svg";
 
 export default {
   components: {
+    ChatWrapper,
     Camera,
 
-    DuoCamSvg
+    SoloCamSvg
   },
-  layout: "chatSegmentsVariation",
+  layout: "variation",
   head() {
     return this.$buildHead({
       path: this.$route.path
     });
-  },
-  computed: {
-    people() {
-      return this.$store.state.config.people;
-    }
   },
   mounted() {
     this.$store.dispatch("pageChanged");

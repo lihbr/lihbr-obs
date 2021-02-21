@@ -79,8 +79,6 @@ html
   margin-right: calc(100% - 100vw)
   @apply antialiased box-border font-main font-light text-slate overflow-hidden bg-transparent transition-color
 
-  background: #000000
-
   &.dark
     @apply text-cream
 

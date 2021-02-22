@@ -2,9 +2,11 @@
 <template>
   <div class="__page__screen-brb">
     <!-- background -->
-    <background-text :style="kaomoji.style" :color="theme.current">
-      {{ kaomoji.value }}
-    </background-text>
+    <background-timer
+      :color="theme.current"
+      :placeholder="kaomoji"
+      :end="timer.end"
+    />
     <!-- content -->
     <main
       class="flex flex-col h-full justify-center stack-5"
@@ -24,11 +26,11 @@
 <script>
 import kaomoji from "~/assets/data/kaomoji.json";
 
-import BackgroundText from "~/components/display/background/Text.vue";
+import BackgroundTimer from "~/components/display/background/Timer.vue";
 
 export default {
   components: {
-    BackgroundText
+    BackgroundTimer
   },
   layout: "screen",
   data() {
@@ -42,6 +44,9 @@ export default {
     });
   },
   computed: {
+    timer() {
+      return this.$store.state.config.timer;
+    },
     theme() {
       return this.$store.state.theme;
     }

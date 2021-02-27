@@ -27,10 +27,10 @@
       />
       <aside :style="{ width: '393px' }" class="flex flex-col justify-between">
         <camera size="393px" :color="$store.state.theme.antepenultimate">
-          {{ people.host }}
+          {{ people.guest }}
         </camera>
         <camera size="393px" :color="$store.state.theme.penultimate">
-          {{ people.guest }}
+          {{ people.host }}
         </camera>
       </aside>
     </section>
